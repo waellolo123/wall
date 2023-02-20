@@ -35,7 +35,10 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use("/static", express.static(path.join(__dirname, "public/images")));
+app.use(
+  "/static",
+  express.static(path.join(__dirname.replace("/dist", ""), "public/images"))
+);
 
 /* Connect to DB */
 const MONGO_URI = process.env.MONGO_URI!;
