@@ -39,7 +39,7 @@ axiosInstance.interceptors.request.use(
   }
 );
 
-let apiUrl = "http://localhost:3400/api"; //Endpoint with reversed proxy
+let apiUrl = "/api"; //Endpoint with reversed proxy
 
 export const getList = async (resource) => {
   const url = `${apiUrl}/${resource}`;

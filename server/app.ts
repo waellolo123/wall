@@ -13,7 +13,7 @@ const app: Express = express();
 dotenv.config();
 
 /* cors for cross origin */
-const allowedOrigins = ["http://localhost:3000", "http://walltribute.com"];
+/* const allowedOrigins = ["http://localhost:3000", "http://walltribute.com"];
 app.use(
   cors({
     origin(origin, callback) {
@@ -29,7 +29,7 @@ app.use(
       return callback(null, true);
     },
   })
-);
+); */
 
 app.use(morgan("dev"));
 app.use(express.json());
