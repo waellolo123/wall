@@ -1,0 +1,44 @@
+.structure {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}    
+.structure-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.structure-title {
+    color: rgb(255, 255, 255);
+    font-size: 3em;
+    margin: 20px;
+}
+.places {
+    width: 40%;
+    height: 200px;
+    margin: 5px;
+    background-color: rgb(214, 214, 214);
+    box-shadow:  1px 1px 3px #000000;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .4s ease;
+}
+.places:hover {
+    box-shadow: none;
+}
+.place-title {
+    color: white;
+    font-size: 2em;
+}
+.place1 {}
+.place2 {}
+.place3 {}
+.place4 {}
+.place5 {}
+.place6 {}

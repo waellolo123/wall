@@ -1,0 +1,20 @@
+.hex {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 5px;
+
+  }
+  .hex img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    position: absolute;
+    border-radius: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: all 1s ease; 
+  }
+  .hex img:hover {
+      transform: scale(1.2); 
+  }

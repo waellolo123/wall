@@ -1,0 +1,12 @@
+.footer {
+    /* background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(69,15,85,1) 28%, rgba(118,9,121,1) 52%, rgba(108,0,26,1) 100%); */
+    width: 100%;
+    padding: 40px 0;
+    background: linear-gradient(to top, #ececec, transparent);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

@@ -1,0 +1,94 @@
+.admin {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+}
+.admin-container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  height: 100vh;
+  background-color: rgb(230, 230, 230);
+  border-radius: 15px;
+  display: flex;
+}
+.users-section {
+  width: 25%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.users-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.user-span {
+  color: gray;
+  font-size: 1.3em;
+  margin-left: 20px;
+}
+.users-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.users-btn {
+  width: 100px;
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid white;
+  transition: 0.4s ease;
+  color: gray;
+  font-weight: bold;
+  cursor: pointer;
+}
+.users-btn:hover {
+  background-color: transparent;
+  color: white;
+}
+.images-section {
+  width: 80%;
+  padding: 20px;
+  margin-left: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(199, 199, 199);
+}
+.single-image {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  position: relative;
+}
+.single {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.single-imageLayer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 3;
+  border-radius: 5px;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+.single-imageLayer:hover {
+  background-color: rgba(0, 0, 0, 0.336);
+}

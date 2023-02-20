@@ -1,0 +1,28 @@
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.social-icon {
+    margin: 0 10px;
+    font-size: 1.8em;
+    border: 1px solid white;
+    padding: 5px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow:  5px 5px 8px #969696,
+             -5px -5px 10px #ffffff;
+    transition: 1s ease; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 50%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    /* color:transparent;
+    -webkit-background-clip:text; */
+}
+.social-icon:hover {
+    box-shadow:  none;
+}
