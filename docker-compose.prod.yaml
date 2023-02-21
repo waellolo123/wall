@@ -9,21 +9,20 @@ services:
         NODE_ENV: production
     ports:
       - "80:80"
-     # - "443:443"
+      - "443:443"
     volumes:
       - ./nginx/default-prod.conf:/etc/nginx/conf.d/default.conf:ro
-      - ./certs:/etc/nginx/certs
-     # - ./certbot/www:/var/www/certbot/:ro
-     # - ./certbot/conf/:/etc/nginx/ssl/:ro      
+      - ./certbot/www:/var/www/certbot/:ro
+      - ./certbot/conf/:/etc/nginx/ssl/:ro    
     depends_on:
       - mkcert
       
-  #certbot:
-  #  image: certbot/certbot
-  #  volumes:
-   #   - ./certbot/conf:/etc/letsencrypt
-   #   - ./certbot/www:/var/www/certbot
-   # command: certonly --webroot --webroot-path=/var/www/certbot --email wael.22@live.fr --agree-tos --no-eff-email --staging -d walltribute.com -d www.walltribute.com 
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    command: certonly --webroot --webroot-path=/var/www/certbot --email wael.22@live.fr --agree-tos --no-eff-email --staging -d walltribute.com -d www.walltribute.com 
   mkcert:
     image: joshuajaco/mkcert
     volumes:
