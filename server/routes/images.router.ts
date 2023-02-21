@@ -30,7 +30,7 @@ router.post(
  * Method("GET")
  * Private
  */
-router.get("/images", PROTECT, FindUser, List);
+router.get("/images", List);
 
 /*
  * Method("GET")
