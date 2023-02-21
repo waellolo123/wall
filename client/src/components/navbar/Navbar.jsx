@@ -1,13 +1,17 @@
 import React from "react";
-import "./navbar.css";
-import { Link } from "react-router-dom";
-import Social from "../social/Social";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { LogoutAction } from "../../redux/actions/authActions";
+import { Search } from "../../redux/actions/imagesActions";
+import Social from "../social/Social";
+import "./navbar.css";
 
 const Navbar = () => {
   const { isConnected, user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const onSearch = (e) => {
+    dispatch(Search(e.target.value));
+  };
   return (
     <div className="navbar">
       <div className="nav-container">
@@ -39,7 +43,12 @@ const Navbar = () => {
             </li>
           )}
         </ul>
-        <input type="text" placeholder="Search" className="nav-input" />
+        <input
+          type="text"
+          placeholder="Search"
+          className="nav-input"
+          onKeyUp={onSearch}
+        />
         <button className="nav-btn">
           <Link
             to="/structure"

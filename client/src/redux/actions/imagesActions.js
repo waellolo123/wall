@@ -15,6 +15,17 @@ export const GetGlobalImagesAction = () => async (dispatch) => {
   }
 };
 
+//#######################################
+export const Search = (query) => async (dispatch) => {
+  try {
+    const data = await getList(`search?search=${query}`);
+    dispatch(GetAllImagesReducer(data));
+  } catch (error) {
+    dispatch(IsErrorReducer(true));
+    dispatch(ErrorsReducer(error.response.data));
+  }
+};
+
 //############# Get images by user #############
 //#######################################
 export const GetAllImagesAction = (id) => async (dispatch) => {

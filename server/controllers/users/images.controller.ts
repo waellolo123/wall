@@ -101,6 +101,26 @@ async function GetImageById(req: Request, res: Response) {
     });
 }
 
+// ######################### Get image by Id #########################/;
+
+async function Search(req: Request, res: Response) {
+  const keywords = req.query.search
+    ? {
+        $or: [
+          { title: { $regex: req.query.search, $options: "i" } },
+          { description: { $regex: req.query.search, $options: "i" } },
+        ],
+      }
+    : {};
+  const data = await imagesModel
+    .find(keywords)
+    .find({
+      _id: { $ne: req?.user?._id },
+    })
+    .populate("user", "-password");
+  res.send(data);
+}
+
 // ######################### Payment #########################/;
 
 async function Payment(req: Request, res: Response) {
@@ -143,4 +163,4 @@ async function Payment(req: Request, res: Response) {
   }
 }
 
-export { Add, List, Delete, GetImageByUser, Payment, GetImageById };
+export { Add, List, Delete, GetImageByUser, Payment, GetImageById, Search };

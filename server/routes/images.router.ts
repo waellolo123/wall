@@ -7,6 +7,7 @@ import {
   GetImageByUser,
   List,
   Payment,
+  Search,
 } from "../controllers/users/images.controller";
 import PROTECT from "../middleware/authMiddleware";
 import { FindUser } from "../middleware/findUserMiddleware";
@@ -33,9 +34,15 @@ router.get("/images", PROTECT, FindUser, List);
 
 /*
  * Method("GET")
- * Private
+ * Public
  */
 router.get("/images/one/:id", GetImageById);
+
+/*
+ * Method("GET")
+ * Public
+ */
+router.get("/search", Search);
 
 /*
  * Method("GET")
