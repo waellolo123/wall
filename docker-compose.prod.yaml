@@ -7,23 +7,22 @@ services:
       dockerfile: Dockerfile.nginx
       args:
         NODE_ENV: production
-    restart: always    
     ports:
       - "80:80"
-      - "443:443"
+     # - "443:443"
     volumes:
       - ./nginx/default-prod.conf:/etc/nginx/conf.d/default.conf:ro
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot    
-    depends_on:
-      - certbot
+     # - ./certbot/www:/var/www/certbot/:ro
+     # - ./certbot/conf/:/etc/nginx/ssl/:ro      
+   # depends_on:
+    #  - server
       
-  certbot:
-    image: certbot/certbot
-    volumes:
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
-    command: certonly --webroot --webroot-path=/var/www/certbot --email wael.22@live.fr --agree-tos --no-eff-email --staging -d walltribute.com -d www.walltribute.com 
+  #certbot:
+  #  image: certbot/certbot
+  #  volumes:
+   #   - ./certbot/conf:/etc/letsencrypt
+   #   - ./certbot/www:/var/www/certbot
+   # command: certonly --webroot --webroot-path=/var/www/certbot --email wael.22@live.fr --agree-tos --no-eff-email --staging -d walltribute.com -d www.walltribute.com 
 
   server:
     build:
