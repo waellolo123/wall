@@ -22,7 +22,7 @@ services:
       args:
         NODE_ENV: production
     volumes:
-      - ./media:/app/public
+      - ./public/images:/app/public/images
     environment: 
       - MONGO_URI=mongodb://walltributedb:eWy^B&Pfkd*E@mongo:27017/?authSource=admin    
     command: yarn start:prod
