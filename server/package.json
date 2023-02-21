@@ -5,10 +5,11 @@
   "main": "dist/app.js",
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
-    "build": "tsc & yarn copy-assets",
+    "build": "tsc",
     "prestart": "npm run build",
-    "start": "node dist/app.js",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/app.js\" \"cd ../client && npm start\""
+    "start:dev": "node app.js",
+    "start:prod": "node app.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/app.js\" \"cd ../client && npm start:dev\""
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

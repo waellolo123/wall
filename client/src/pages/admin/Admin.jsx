@@ -56,11 +56,7 @@ const Admin = () => {
               return (
                 <>
                   <div className="single-image">
-                    <img
-                      src={`http://localhost:3400${image.image}`}
-                      alt=""
-                      className="single"
-                    />
+                    <img src={`${image.image}`} alt="" className="single" />
                     <div className="single-imageLayer"></div>
                     <button
                       className="users-btn"

@@ -23,7 +23,7 @@ function Add(req: Request | any, res: Response) {
           title: req.body.title,
           description: req.body.description,
           position: req.body.position,
-          image: path.join(`/static/${req?.user?._id}/${req?.file?.filename}`),
+          image: path.join(`/images/${req?.user?._id}/${req?.file?.filename}`),
         };
         await imagesModel.create(image);
         res.status(200).json({
@@ -60,7 +60,7 @@ async function Delete(req: Request, res: Response) {
       if (result) {
         const pathImage = `${path.join(
           ImageDir,
-          result.image.replace("/static", "")
+          result.image.replace("/images", "")
         )}`;
         fs.unlink(pathImage, async (err) => {
           if (err) {

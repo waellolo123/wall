@@ -24,11 +24,7 @@ const Home = () => {
             {left.map((i) => {
               return (
                 <Link to="/image/:id">
-                  <img
-                    src={`http://localhost:3400${i.image}`}
-                    alt=""
-                    className="home-image"
-                  />
+                  <img src={`${i.image}`} alt="" className="home-image" />
                 </Link>
               );
             })}
@@ -37,11 +33,7 @@ const Home = () => {
             {right.map((i) => {
               return (
                 <Link to="/image/:id">
-                  <img
-                    src={`http://localhost:3400${i.image}`}
-                    alt=""
-                    className="home-image"
-                  />
+                  <img src={`${i.image}`} alt="" className="home-image" />
                 </Link>
               );
             })}
@@ -50,11 +42,7 @@ const Home = () => {
             {Cleft.map((i) => {
               return (
                 <Link to="/image/:id">
-                  <img
-                    src={`http://localhost:3400${i.image}`}
-                    alt=""
-                    className="home-image"
-                  />
+                  <img src={`${i.image}`} alt="" className="home-image" />
                 </Link>
               );
             })}
@@ -63,11 +51,7 @@ const Home = () => {
             {Cright.map((i) => {
               return (
                 <Link to="/image/:id">
-                  <img
-                    src={`http://localhost:3400${i.image}`}
-                    alt=""
-                    className="home-image"
-                  />
+                  <img src={`${i.image}`} alt="" className="home-image" />
                 </Link>
               );
             })}
@@ -76,11 +60,7 @@ const Home = () => {
             {Bleft.map((i) => {
               return (
                 <Link to="/image/:id">
-                  <img
-                    src={`http://localhost:3400${i.image}`}
-                    alt=""
-                    className="home-image"
-                  />
+                  <img src={`${i.image}`} alt="" className="home-image" />
                 </Link>
               );
             })}
@@ -89,11 +69,7 @@ const Home = () => {
             {Bright.map((i) => {
               return (
                 <Link to="/image/:id">
-                  <img
-                    src={`http://localhost:3400${i.image}`}
-                    alt=""
-                    className="home-image"
-                  />
+                  <img src={`${i.image}`} alt="" className="home-image" />
                 </Link>
               );
             })}

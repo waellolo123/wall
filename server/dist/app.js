@@ -35,7 +35,7 @@ app.use((0, morgan_1.default)("dev"));
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: false }));
 app.use((0, cookie_parser_1.default)());
-app.use("/static", express_1.default.static("public/images"));
+app.use("/images", express_1.default.static("public/images"));
 /* Connect to DB */
 const MONGO_URI = process.env.MONGO_URI;
 const retryStart = () => {

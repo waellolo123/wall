@@ -1,12 +1,10 @@
-FROM node:18
+FROM node:18 as builder
 WORKDIR /app
+ENV NODE_ENV development
 COPY package*.json ./
 COPY yarn.lock .
 ARG NODE_ENV
-RUN if [ "$NODE_ENV" = "development" ]; \
-    then npm install; \
-    else npm install --only=production; \
-    fi
+RUN  npm install
 COPY . .
 RUN yarn build 
 
@@ -15,7 +13,9 @@ WORKDIR /app
 ENV NODE_ENV production
 COPY --from=builder /app/package.json  /app
 COPY --from=builder /app/yarn.lock  /app
+RUN npm install --only=production
 COPY --from=builder /app/dist /app
 COPY --from=builder /app/public /app
+
 ENV PORT 3400
 EXPOSE ${PORT}

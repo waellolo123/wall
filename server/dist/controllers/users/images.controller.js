@@ -38,7 +38,7 @@ function Add(req, res) {
                     title: req.body.title,
                     description: req.body.description,
                     position: req.body.position,
-                    image: path_1.default.join(`/static/${(_b = req === null || req === void 0 ? void 0 : req.user) === null || _b === void 0 ? void 0 : _b._id}/${(_c = req === null || req === void 0 ? void 0 : req.file) === null || _c === void 0 ? void 0 : _c.filename}`),
+                    image: path_1.default.join(`/images/${(_b = req === null || req === void 0 ? void 0 : req.user) === null || _b === void 0 ? void 0 : _b._id}/${(_c = req === null || req === void 0 ? void 0 : req.file) === null || _c === void 0 ? void 0 : _c.filename}`),
                 };
                 yield images_model_1.default.create(image);
                 res.status(200).json({
@@ -73,7 +73,7 @@ function Delete(req, res) {
             .populate("user", "-password")
             .then((result) => __awaiter(this, void 0, void 0, function* () {
             if (result) {
-                const pathImage = `${path_1.default.join(ImageDir, result.image.replace("/static", ""))}`;
+                const pathImage = `${path_1.default.join(ImageDir, result.image.replace("/images", ""))}`;
                 fs_1.default.unlink(pathImage, (err) => __awaiter(this, void 0, void 0, function* () {
                     if (err) {
                         return res.status(500).json({
