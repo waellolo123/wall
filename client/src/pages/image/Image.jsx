@@ -22,7 +22,7 @@ const Image = () => {
           <img src={`${image?.image}`} alt="" className="img-box" />
         </div>
         <div className="image-rightBox">
-          <h2 className="box-name">{image?.user?.fullname}</h2>
+          <h2 className="box-name">{image?.title}</h2>
           <h3 className="box-link">
             <a href={image?.sharedLink} target="_blank">
               {image?.sharedLink}
