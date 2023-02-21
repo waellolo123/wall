@@ -29,22 +29,11 @@ services:
     depends_on:
       - mongo  
   mongo:
-    image: mongo
-    restart: always
     environment:
       - MONGO_INITDB_ROOT_USERNAME=walltributedb
       - MONGO_INITDB_ROOT_PASSWORD=eWy^B&Pfkd*E
-    volumes:
-      - mongo-db:/data/db
   mongo-express:
-    image: mongo-express
-    restart: always
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: mongo-admin-123
       ME_CONFIG_MONGODB_ADMINPASSWORD: eWy^B&Pfkd*E
       ME_CONFIG_MONGODB_URL: mongodb://walltributedb:eWy^B&Pfkd*E@mongo:27017/
-
-
-
-volumes:
-  mongo-db:
