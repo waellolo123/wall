@@ -1,0 +1,21 @@
+FROM node:18
+WORKDIR /app
+COPY package*.json ./
+COPY yarn.lock .
+ARG NODE_ENV
+RUN if [ "$NODE_ENV" = "development" ]; \
+    then npm install; \
+    else npm install --only=production; \
+    fi
+COPY . .
+RUN yarn build 
+
+FROM node:18 as production
+WORKDIR /app
+ENV NODE_ENV production
+COPY --from=builder /app/package.json  /app
+COPY --from=builder /app/yarn.lock  /app
+COPY --from=builder /app/dist /app
+COPY --from=builder /app/public /app
+ENV PORT 3400
+EXPOSE ${PORT}

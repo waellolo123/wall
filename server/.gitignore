@@ -1,2 +1,11 @@
 node_modules
+config
+controllers
+middleware
+models 
+public/images
+routes
+tools
+util
+validations
 yarn-error.log

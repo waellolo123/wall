@@ -1,6 +1,22 @@
 version: '3.1'
 
 services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "3000:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+ 
+  client:
+    build: ./client
+    environment:
+      - PORT=3000  
+
+  server:
+    build: ./server
+    environment:
+      - PORT=3400      
 
   mongo:
     image: mongo
@@ -10,8 +26,6 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=root
     volumes:
       - mongo-db:/data/db
-    ports:
-      - 27017:27017  
 
   mongo-express:
     image: mongo-express

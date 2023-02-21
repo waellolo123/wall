@@ -5,7 +5,6 @@
   "main": "dist/app.js",
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
-    "copy-assets": "ts-node tools/copyAssets",
     "build": "tsc & yarn copy-assets",
     "prestart": "npm run build",
     "start": "node dist/app.js",
