@@ -103,7 +103,7 @@ async function GetImageById(req: Request, res: Response) {
 
 // ######################### Get image by Id #########################/;
 
-async function Search(req: Request, res: Response) {
+async function Search(req: Request | any, res: Response) {
   const keywords = req.query.search
     ? {
         $or: [
