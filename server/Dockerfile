@@ -10,4 +10,4 @@ RUN if [ "$NODE_ENV" = "development" ]; \
 COPY . .
 ENV PORT 3400
 EXPOSE ${PORT}
-CMD ["node", "app.js"]
+CMD ["node", "dist/app.js"]

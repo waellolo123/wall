@@ -23,7 +23,7 @@ const Home = () => {
           <div className="up-left blocks">
             {left.map((i) => {
               return (
-                <Link to="/image/:id">
+                <Link to={`image/${i._id}`}>
                   <img src={`${i.image}`} alt="" className="home-image" />
                 </Link>
               );
@@ -32,7 +32,7 @@ const Home = () => {
           <div className="up-right blocks">
             {right.map((i) => {
               return (
-                <Link to="/image/:id">
+                <Link to={`image/${i._id}`}>
                   <img src={`${i.image}`} alt="" className="home-image" />
                 </Link>
               );
@@ -41,7 +41,7 @@ const Home = () => {
           <div className="center-left blocks">
             {Cleft.map((i) => {
               return (
-                <Link to="/image/:id">
+                <Link to={`image/${i._id}`}>
                   <img src={`${i.image}`} alt="" className="home-image" />
                 </Link>
               );
@@ -50,7 +50,7 @@ const Home = () => {
           <div className="center-right blocks">
             {Cright.map((i) => {
               return (
-                <Link to="/image/:id">
+                <Link to={`image/${i._id}`}>
                   <img src={`${i.image}`} alt="" className="home-image" />
                 </Link>
               );
@@ -59,7 +59,7 @@ const Home = () => {
           <div className="down-left blocks">
             {Bleft.map((i) => {
               return (
-                <Link to="/image/:id">
+                <Link to={`image/${i._id}`}>
                   <img src={`${i.image}`} alt="" className="home-image" />
                 </Link>
               );
@@ -68,7 +68,7 @@ const Home = () => {
           <div className="down-right blocks">
             {Bright.map((i) => {
               return (
-                <Link to="/image/:id">
+                <Link to={`image/${i._id}`}>
                   <img src={`${i.image}`} alt="" className="home-image" />
                 </Link>
               );

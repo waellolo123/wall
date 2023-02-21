@@ -22,6 +22,7 @@ function Add(req: Request | any, res: Response) {
           user: req?.user?._id,
           title: req.body.title,
           description: req.body.description,
+          sharedLink: req.body.sharedLink,
           position: req.body.position,
           image: path.join(`/images/${req?.user?._id}/${req?.file?.filename}`),
         };
@@ -89,6 +90,17 @@ async function GetImageByUser(req: Request, res: Response) {
     });
 }
 
+// ######################### Get image by Id #########################/;
+
+async function GetImageById(req: Request, res: Response) {
+  await imagesModel
+    .findOne({ _id: req?.params.id })
+    .populate("user", "-password")
+    .then((result) => {
+      res.status(200).json(result);
+    });
+}
+
 // ######################### Payment #########################/;
 
 async function Payment(req: Request, res: Response) {
@@ -131,4 +143,4 @@ async function Payment(req: Request, res: Response) {
   }
 }
 
-export { Add, List, Delete, GetImageByUser, Payment };
+export { Add, List, Delete, GetImageByUser, Payment, GetImageById };

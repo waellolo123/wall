@@ -13,8 +13,9 @@ const Upload = () => {
   const onSubmit = (data) => {
     const formData = new FormData();
     formData.append("title", data.title);
-    formData.append("description", data.desciption);
+    formData.append("description", data.description);
     formData.append("image", data.image[0]);
+    formData.append("sharedLink", data.sharedLink);
     formData.append("position", structure);
     dispatch(AddImageAction(formData));
   };
@@ -46,12 +47,23 @@ const Upload = () => {
           />
           {errors.title && <span className="errors-span">{errors.title}</span>}
 
-          <label className="upload-label">Your Description</label>
+          <label className="upload-label">Your Shared link</label>
           <input
+            type="text"
+            placeholder="Shared link"
+            className="upload-input"
+            {...register("sharedLink")}
+          />
+          {errors.sharedLink && (
+            <span className="errors-span">{errors.sharedLink}</span>
+          )}
+          <label className="upload-label">Your Description</label>
+          <textarea
             type="text"
             placeholder="Description"
             className="upload-input"
             {...register("description")}
+            rows="5"
           />
           {errors.description && (
             <span className="errors-span">{errors.description}</span>

@@ -17,6 +17,13 @@ function imageValidation(req: any) {
     errors.description = "required description";
   }
 
+  req.body.sharedLink = !isEmpty(req.body.sharedLink)
+    ? req.body.sharedLink
+    : "";
+  if (validator.isEmpty(req.body.sharedLink)) {
+    errors.sharedLink = "required sharedLink";
+  }
+
   req.file = !isEmpty(req.file) ? req.file : "";
   if (!req.file.filename) {
     errors.image = "Required image";

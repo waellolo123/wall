@@ -3,6 +3,7 @@ import Stripe from "stripe";
 import {
   Add,
   Delete,
+  GetImageById,
   GetImageByUser,
   List,
   Payment,
@@ -29,6 +30,12 @@ router.post(
  * Private
  */
 router.get("/images", PROTECT, FindUser, List);
+
+/*
+ * Method("GET")
+ * Private
+ */
+router.get("/images/one/:id", GetImageById);
 
 /*
  * Method("GET")

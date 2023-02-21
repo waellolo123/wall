@@ -11,6 +11,9 @@ const imageSchema = new Schema(
       type: String,
       required: true,
     },
+    sharedLink: {
+      type: String,
+    },
     description: {
       type: String,
       required: true,
