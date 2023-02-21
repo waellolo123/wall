@@ -22,7 +22,7 @@ services:
     volumes:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
-    command: certonly --standalone --preferred-challenges http-01 --agree-tos --email your-email-address -d walltribute.com -d walltribute.com --ipv6
+    command: certonly --webroot --webroot-path=/var/www/certbot --email wael.22@live.fr --agree-tos --no-eff-email --staging -d walltribute.com -d www.walltribute.com 
 
   server:
     build:
