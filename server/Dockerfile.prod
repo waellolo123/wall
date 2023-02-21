@@ -5,6 +5,7 @@ COPY package*.json ./
 COPY yarn.lock .
 ARG NODE_ENV
 RUN  npm install
+RUN mkdir /public/images
 COPY . .
 RUN yarn build 
 
