@@ -16,7 +16,7 @@ COPY --from=builder /app/yarn.lock  /app
 RUN npm install --only=production
 COPY --from=builder /app/dist /app
 COPY --from=builder /app/config /app/config
-RUN mkdir -p /public/images
+RUN mkdir -p /app/public/images
 
 ENV PORT 3400
 EXPOSE ${PORT}
