@@ -1,4 +1,4 @@
 node_modules
-public/images/*
+public
 dist
 yarn-error.log
