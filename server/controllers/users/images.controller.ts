@@ -49,9 +49,10 @@ async function List(req: Request, res: Response) {
 // ######################### Delete image by Id #########################/;
 
 async function Delete(req: Request, res: Response) {
-  const homeDir = path
-    .resolve(__dirname)
-    .replace("/dist/controllers/users", "");
+  const homeDir =
+    process.env.NODE_ENV === "development"
+      ? path.resolve(__dirname).replace("/dist/controllers/users", "")
+      : path.resolve(__dirname).replace("/controllers/users", "");
   const ImageDir = path.join(homeDir, "public", "images");
 
   await imagesModel
