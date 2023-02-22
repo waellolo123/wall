@@ -21,9 +21,7 @@ services:
       context: ./server
       dockerfile: Dockerfile.prod
       args:
-        NODE_ENV: production
-      force-rm: true
-      no-cache: true    
+        NODE_ENV: production 
     volumes:
       - ./public/images:/app/public/images
     environment: 
