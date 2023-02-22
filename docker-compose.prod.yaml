@@ -7,6 +7,11 @@ services:
       dockerfile: Dockerfile.nginx
       args:
         NODE_ENV: production
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
     restart: always    
     ports:
       - "80:80"
@@ -21,7 +26,12 @@ services:
       context: ./server
       dockerfile: Dockerfile.prod
       args:
-        NODE_ENV: production 
+        NODE_ENV: production
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"         
     volumes:
       - ./public/images:/app/public/images
     environment: 
@@ -32,6 +42,11 @@ services:
   mongo:
     image: mongo
     restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"    
     environment:
       - MONGO_INITDB_ROOT_USERNAME=walltributedb
       - MONGO_INITDB_ROOT_PASSWORD=eWy^B&Pfkd*E
