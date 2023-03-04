@@ -15,14 +15,16 @@
   font-size: 3em;
 }
 .login-container {
-  height: 80vh;
+  height: 70vh;
+  width: 50%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .login-form {
-  width: 500px;
+  width: 100%;
   padding: 20px;
   border-radius: 15px;
   display: flex;
@@ -63,8 +65,28 @@
   margin: 20px;
   color: rgb(41, 41, 41);
   font-size: 1.5em;
+  text-align: center;
   letter-spacing: 0.1em;
+  background-color: rgba(255, 255, 255, 0.507);
+  border-radius: 5px;
+  padding: 10px;
 }
 .login-span {
   color: rgb(41, 41, 41);
+}
+@media screen and (max-width: 927px) {
+   .login-container {
+    width: 90%;
+   }
+   .login-form {
+    width: 80%;
+   }
+   .login-para {
+    font-size: 1.2em;
+   }
+}
+@media screen and (max-width: 666px) {
+  .login-container {
+    width: 90%;
+  }
 }

@@ -9,7 +9,8 @@
 }
 .upload-container {
     padding: 20px;
-    width: 500px;
+    width: 70%;
+    margin: auto;
     background-color: rgba(0, 0, 0, 0.281);
     border: 2px solid white;
     border-radius: 15px;
@@ -20,10 +21,15 @@
     box-shadow:  10px 10px 20px #7b7b7b,
     -10px -10px 20px #ffffff;
 }
+.form-upload {
+    width: 100%;
+}
 .upload-title {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 2em;
     margin: 0 0 40px 0;
+    text-align: center;
+    width: 80%;
 }
 .choose {
     width: 45px;
@@ -70,4 +76,19 @@
 .upload-btn:hover {
     background-color: white;
     color: gray;
+}
+@media screen and (max-width:711px){
+    .upload-title {
+        font-size: 1.6em;
+    }   
+}
+@media screen and (max-width:463px) {
+    .upload-btn {
+        padding: 10px;
+        font-size: 1em;
+    }
+    .upload-label {
+        font-size: 1.2em;
+        text-align: center;
+    }
 }

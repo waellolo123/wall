@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { LogoutAction } from "../../redux/actions/authActions";
 import { Search } from "../../redux/actions/imagesActions";
 import Social from "../social/Social";
+import Downloads from "../../components/downloads/Downloads";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -17,10 +18,9 @@ const Navbar = () => {
       <div className="nav-container">
         <h2 className="logo">
           <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-            Wall Tribute
+            WallTribute
           </Link>
         </h2>
-        <Social />
         <ul className="nav-list">
           {!isConnected && (
             <li className="nav-link">
@@ -43,6 +43,7 @@ const Navbar = () => {
             </li>
           )}
         </ul>
+        <div className="btnAndSearch">
         <input
           type="text"
           placeholder="Search"
@@ -65,7 +66,10 @@ const Navbar = () => {
           >
             Logout
           </button>
+
         )}
+        </div>
+      
       </div>
     </div>
   );

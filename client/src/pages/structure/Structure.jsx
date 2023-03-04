@@ -3,6 +3,9 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { AddStructureAction } from "../../redux/actions/imagesActions";
 import "./structure.css";
+
+
+
 const Structure = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -16,7 +19,7 @@ const Structure = () => {
         <div className="place1 places">
           <h3 className="place-title">
             <button
-              style={{ textDecoration: "none", color: "inherit" }}
+              className="place-btn"
               onClick={() => AddStucture("left")}
             >
               Up Left
@@ -27,7 +30,7 @@ const Structure = () => {
           <h3 className="place-title">
             <button
               onClick={() => AddStucture("right")}
-              style={{ textDecoration: "none", color: "inherit" }}
+              className="place-btn"
             >
               Up Right
             </button>
@@ -36,7 +39,7 @@ const Structure = () => {
         <div className="place3 places">
           <h3 className="place-title">
             <button
-              style={{ textDecoration: "none", color: "inherit" }}
+              className="place-btn"
               onClick={() => AddStucture("c-left")}
             >
               Center Left
@@ -47,7 +50,7 @@ const Structure = () => {
           <h3 className="place-title">
             <button
               onClick={() => AddStucture("c-right")}
-              style={{ textDecoration: "none", color: "inherit" }}
+              className="place-btn"
             >
               Center Right
             </button>
@@ -56,7 +59,7 @@ const Structure = () => {
         <div className="place5 places">
           <h3 className="place-title">
             <button
-              style={{ textDecoration: "none", color: "inherit" }}
+              className="place-btn"
               onClick={() => AddStucture("b-left")}
             >
               Bottom Left
@@ -67,7 +70,7 @@ const Structure = () => {
           <h3 className="place-title">
             <button
               onClick={() => AddStucture("b-right")}
-              style={{ textDecoration: "none", color: "inherit" }}
+              className="place-btn"
             >
               Bottom Right
             </button>

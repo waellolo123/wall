@@ -20,15 +20,19 @@ const Image = () => {
       <div className="image-box">
         <div className="image-leftBox">
           <img src={`${image?.image}`} alt="" className="img-box" />
+          {/* <img src={heisen} alt="" className="img-box"/> */}
         </div>
         <div className="image-rightBox">
           <h2 className="box-name">{image?.title}</h2>
+          {/* <h2 className="box-name">Heisenberg</h2> */}
           <h3 className="box-link">
-            <a href={image?.sharedLink} target="_blank">
+            {/* heisenberg@gmail.com */}
+            <a href={image?.sharedLink} style={{textDecoration:'none', color: 'inherit'}} target="_blank">
               {image?.sharedLink}
             </a>
           </h3>
           <p className="box-desc">{image?.description}</p>
+          {/* <p className="box-desc">This is a heisen berg image</p> */}
         </div>
       </div>
     </div>

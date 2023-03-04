@@ -6,6 +6,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }    
 .structure-container {
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,6 +16,7 @@
     color: rgb(255, 255, 255);
     font-size: 3em;
     margin: 20px;
+    text-align: center;
 }
 .places {
     width: 40%;
@@ -32,13 +34,36 @@
 .places:hover {
     box-shadow: none;
 }
-.place-title {
+/* .place-title {
     color: white;
     font-size: 2em;
+} */
+.place-btn {
+   padding: 10px 20px;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   background-color: gray;
+   font-size: 1em;
+   transition: .4s ease;
 }
-.place1 {}
-.place2 {}
-.place3 {}
-.place4 {}
-.place5 {}
-.place6 {}
+.place-btn:hover {
+    background-color: rgb(161, 161, 161);
+}
+@media screen and (max-width: 600px) {
+    .places {
+      padding: 10px;
+    }
+    .place-btn {
+        padding: 5px 10px;
+    }
+    .structure-title {
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 400px) {
+   .place-btn {
+     font-size: .8em;
+     padding: 5px;
+   }
+}

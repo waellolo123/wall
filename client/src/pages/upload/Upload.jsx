@@ -24,7 +24,7 @@ const Upload = () => {
       <h2 className="upload-title">
         Please fill the inputs to save your image in the wall
       </h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className='form-upload'>
         <div className="upload-container">
           <h3 className="upload-label">Choose Your Image</h3>
           <label htmlFor="fileInput" className="upload-label choose">

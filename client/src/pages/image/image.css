@@ -21,12 +21,12 @@
 }
 .image-rightBox {
     width: 50%;
-    height: 500px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.801);
+    background-color: rgba(0, 0, 0, 0.76);
 }
 .box-name {
     font-size: 4em;
@@ -41,9 +41,43 @@
     color: white;
     text-decoration: underline;
     cursor: pointer;
+    transition: .4s ease;
+}
+.box-link:hover {
+    color: rgb(190, 190, 190);
 }
 .box-desc {
     font-size: 1.5em;
     width: 80%;
     color: white;
+    text-align: center;
+    letter-spacing: .1em;
+}
+@media screen and (max-width: 1082px) {
+    .image-box {
+        flex-direction: column;
+    }
+    .image-leftBox {
+       width: 80%;
+    }
+    .image-rightBox {
+       width: 80%;
+    }
+}
+@media screen and (max-width: 667px) {
+    .image-leftBox {
+        width: 100%;
+    }
+    .image-rightBox {
+        width: 100%;
+    }
+    .box-name {
+        font-size: 3em;
+    }
+    .box-link {
+        font-size: 1.5em;
+    }
+    .box-desc {
+        font-size: 1.2em;
+    }
 }

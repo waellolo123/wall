@@ -1,0 +1,57 @@
+.video-container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0%;
+  }
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .8;
+    transition: 1s ease;
+  }
+  .video-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      border: none;
+      cursor: pointer;
+      transition: .5s ease;
+      z-index: 100;
+  }
+  .play-icon {
+      color: orange;
+      font-size: 4em;
+      transition: .4s ease;
+    }
+    .play-icon:hover {
+      color: white;
+    }
+  .skip.active {
+    opacity: 0;
+    left: -100%;
+  }
+  @media screen and (max-width: 1155px) {
+    .video-btn {
+        top: 115px;
+        left: 120px;
+    } 
+  }
+  @media screen and (max-width: 463px) {
+    .video-btn {
+        top: 115px;
+        left: 60px;
+    } 
+  }
+  

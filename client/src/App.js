@@ -32,6 +32,7 @@ function App() {
               <PrivateRoute>
                 <Structure />
               </PrivateRoute>
+            
             }
           />
           <Route
@@ -41,7 +42,7 @@ function App() {
                 <UploadProvider>
                   <Upload />
                 </UploadProvider>
-              </PrivateRoute>
+              </PrivateRoute> 
             }
           />
 

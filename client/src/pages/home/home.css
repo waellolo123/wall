@@ -13,22 +13,16 @@
 .image-container {
     width: 80%;
     margin: auto;
-    /* height: 100vh; */
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     border: 1px solid white;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     box-shadow:  10px 10px 20px #7b7b7b,
                 -10px -10px 20px #ffffff;
     background-color: rgb(226, 226, 226);
-    /* background: url('../../assets/nft.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-
 }
 .home-image {
     width: 30px;
@@ -36,13 +30,18 @@
     object-fit: cover;
     cursor: pointer;
     transform: scale(1);
-    transition: 1s ease;
+    transition: .3s ease;
 }
 .home-image:hover {
-    transform: scale(2);
+    transform: scale(1.2);
 }
 .blocks {
     width: 50%;
     height: 280px;
-    /* border: 1px solid red; */
+}
+@media screen and (max-width: 1491px) {
+.image-container {
+   width: 90%;
+   height: auto;
+}
 }
