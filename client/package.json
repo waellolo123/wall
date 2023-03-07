@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "private": true,
+  "homepage": ".",
   "proxy": "http://server:3400",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.2",
